@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaDMaN</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-text">MADMAN</div>
+        <div class="card-icon">💻</div>
+    </div>
+
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Menu -->
+     
+        <div class="container" id="mainMenu">
+        <div class="header">
+            <h1>MADMAN</h1>
+            <p>Content Crator & Gamer & programmer</p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="openSection('che')">
+                <span class="card-icon">?</span>
+                <h2 class="card-title">چگونه؟؟؟</h2>
+                <p class="card-desc">چگونه این گونه شد؟؟؟</p>
+            </div>
+
+            <div class="menu-card" onclick="openSection('about')">
+                <span class="card-icon">👤</span>
+                <h2 class="card-title">درباره من</h2>
+                <p class="card-desc">لغب هام و تکیه کلام هام</p>
+            </div>
+
+            <div class="menu-card" onclick="openSection('specs')">
+                <span class="card-icon">🖥️</span>
+                <h2 class="card-title">مشخصات سیستم</h2>
+                <p class="card-desc">سخت‌افزار  که باهاش کار می‌کنم</p>
+            </div>
+
+            <div class="menu-card" onclick="openSection('social')">
+                <span class="card-icon">🌐</span>
+                <h2 class="card-title">شبکه‌های اجتماعی</h2>
+                <p class="card-desc">لینک کانال‌های من در آپارات، یوتیوب و روبیکا</p>
+            </div>
+            <div class="menu-card" onclick="openSection('taj')">
+                <span class="card-icon">🖱</span>
+                <h2 class="card-title">مشخصات تجهیزات</h2>
+                <p class="card-desc">تجهیزاتی که باهاش کار میکنم</p>
+            </div>
+            <div class="menu-card" onclick="openSection('mad')">
+                <span class="card-icon">🌈</span>
+                <h2 class="card-title">محصولات دیگر MaDMaN</h2>
+                <p class="card-desc">سایت و توضیحات محصولات دیگر MaDMaN</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="content-section" id="cheSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="section-content">
+            <div class="about-box">
+                <p class="about-text">
+                    سلام! من <span class="highlight">ممد</span> هستم 👋<br><br>
+                    متولد <span class="highlight"> اسفند ماه 1394  </span> و از سال <span class="highlight">1405</span> هست که فعالیت خودم رو توی 
+                    <span class="highlight">آپارات</span> شروع کردم.<br><br>
+                   
+                    
+                    البته شاید بگید من ۱۰ ساله کوجا ؟؟؟؟ اینجا کوجا؟؟؟
+                    راستش رو بخواین من وارد <span class="highlight">دنیای کامپیتر هستم</span>
+                    <br>
+                    اگر تازه منو میشناسی حتما <span class="highlight">بشناس!!!!!!!</span>
+                    <span style="font-size: 2rem;">🎮</span>
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-section" id="aboutSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="about-box">
+            <div class="menu-card">
+                <div class="spec-card">
+                    <div class="spec-name">تکیه کلامم</div>
+                    <div class="spec-value">بیا منو بخورر!!!</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-name">لغبام</div>
+                    <div class="spec-value">ممد قلی , مد من</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-name">اسمم </div>
+                    <div class="spec-value">ممد علیقلی زاده </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Specs Section -->
+    <div class="content-section" id="specsSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="section-content">
+          <div class="menu-card">
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">🧠</div>
+                    <div class="spec-name">پردازنده</div>
+                    <div class="spec-value">Intel Core i7-8550U</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">💾</div>
+                    <div class="spec-name">رم</div>
+                    <div class="spec-value">8 GB DDR4</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">🎮</div>
+                    <div class="spec-name">کارت گرافیک</div>
+                    <div class="spec-value">NVIDIA Geforce MX130</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">⚡</div>
+                    <div class="spec-name">حافظه SSD</div>
+                    <div class="spec-value">512 GB</div>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="content-section" id="madSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="menu-card">
+            <a href="https://b2n.ir/ab3y-net">
+            <div class="spec-icon"><img src="ab3y-logo.png" sizes="10x69"></div>
+            <div class="spec-name">ab3y</div>
+            <div class="spec-value">ab3y for code & help</div>
+            </a>
+        </div>
+    </div>
+    <div class="content-section" id="tajSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="section-content">
+          <div class="menu-card">
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">🖱</div>
+                    <div class="spec-name">موس</div>
+                    <div class="spec-value">هنوز فابریک</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">⌨</div>
+                    <div class="spec-name">کیبورد</div>
+                    <div class="spec-value">هنوز فابریک</div>
+                </div>
+                <div class="spec-card">
+                    <div class="spec-icon">🎧</div>
+                    <div class="spec-name">هدفون </div>
+                    <div class="spec-value">S33 ENC+ANC Sterio</div>
+                </div>
+               </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="content-section" id="manSection">
+        <button class="close-btn" onclick="closeSection()">🏠</button>
+        <div class="menu-card">
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon"></div>
+                    <div class="spec-name"></div>
+                    <div class="spec-value"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Social Section -->
+<div class="content-section" id="socialSection">
+    <button class="close-btn" onclick="closeSection()">🏠</button>
+
+    <div class="section-content">
+        <div class="social-grid">
+
+            <a href="https://www.aparat.com/MaDMaNGH"
+               target="_blank"
+               class="social-link aparat">
+                <span class="social-icon">📺</span>
+                <div class="social-info">
+                    <div class="social-name">آپارات</div>
+                    <div class="social-url">aparat.com/MaDMaNGH</div>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/"
+               target="_blank"
+               class="social-link youtube">
+                <span class="social-icon">▶️</span>
+                <div class="social-info">
+                    <div class="social-name">یوتیوب</div>
+                    <div class="social-url">youtube.com/ به زودی</div>
+                </div>
+            </a>
+
+            <a href="https://rubika.ir/MaDMaNGH_kanal"
+               target="_blank"
+               class="social-link rubika">
+                <span class="social-icon">💬</span>
+                <div class="social-info">
+                    <div class="social-name">روبیکا</div>
+                    <div class="social-url">https://rubika.ir/MaDMaNGH_kanal
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://t.me/"
+               target="_blank"
+               class="social-link telegram">
+                <span class="social-icon">🔵</span>
+                <div class="social-info">
+                    <div class="social-name">تلگرام</div>
+                    <div class="social-url">t.me/ به زودی</div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+   <script>
+        // Create particles
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Hide loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1000);
+        });
+
+        createParticles();
+
+        // Section management
+        function openSection(section) {
+            document.getElementById('mainMenu').style.display = 'none';
+            document.getElementById(section + 'Section').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSection() {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById('mainMenu').style.display = 'flex';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Keyboard support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSection();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'a') openSection('about')
+        })
+    </script>
+</body>
+</html>

@@ -390,6 +390,28 @@ window.addEventListener('load', () => {
         updateUI(savedUser);
     }
 });
+async function sendMessageToAPI() {
+    const message = document.getElementById('adminMsg').value;
+    const user = localStorage.getItem('currentUser') || "کاربر ناشناس";
+    const status = document.getElementById('msgStatus');
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ sender: user, text: message })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+            status.innerText = data.message;
+            status.style.color = "#00f260";
+        }
+    } catch (error) {
+        status.innerText = "خطا در اتصال به API اختصاصی";
+        status.style.color = "red";
+    }
+}
     </script>
 </body>
 </html>

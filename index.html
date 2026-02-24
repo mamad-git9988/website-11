@@ -13,6 +13,7 @@
         <div class="loader-text">MADMAN</div>
         <div class="card-icon">💻</div>
     </div>
+    <a href="./index-1.html"><button class="clse-btn"><</button></a>
 
     <!-- Particles Background -->
     <div class="particles" id="particles"></div>
@@ -24,7 +25,6 @@
             <h1>MADMAN</h1>
             <p>Content Crator & Gamer & programmer</p>
         </div>
-        <a href="./index-1.html"><button class="close-btn"><</button></a>
         <div class="menu-grid">
             <div class="menu-card" onclick="openSection('che')">
                 <span class="card-icon">?</span>
@@ -40,6 +40,11 @@
                 <span class="card-icon">🌐</span>
                 <h2 class="card-title">شبکه‌های اجتماعی</h2>
                 <p class="card-desc">لینک کانال‌های من در آپارات، یوتیوب و روبیکا</p>
+            </div>
+            <div class="menu-card" onclick="openSection('user')">
+                <span class="card-icon">👤</span>
+                <h2 class="card-title">پنل کاربری</h2>
+                <p class="card-desc" id="userStatus">وارد حساب خود شوید</p>
             </div>
         </div>
     </div>
@@ -135,6 +140,25 @@
             </a>
         </div>
     </div>
+    <div class="content-section" id="userSection">
+    <button class="close-btn" onclick="closeSection()">🏠</button>
+    <div class="section-content">
+        <div class="about-box">
+            <h2 class="highlight" id="userTitle">ورود به حساب کاربری</h2>
+            <br>
+            <div class="specs-grid" style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" id="username" placeholder="نام کاربری" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center; font-family: Vazirmatn;">
+                <input type="password" id="password" placeholder="رمز عبور" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center; font-family: Vazirmatn;">
+                
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button onclick="handleRegister()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; font-size: 1rem; background: #555;">ثبت‌نام</button>
+                    <button onclick="handleLogin()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; font-size: 1rem; background: #00f260; color: black;">ورود</button>
+                </div>
+                <p id="authMsg" style="margin-top: 15px; font-size: 0.9rem;"></p>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="content-section" id="tajSection">
         <button class="close-btn" onclick="closeSection()">🏠</button>
         <div class="section-content">
@@ -268,6 +292,104 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'a') openSection('about')
         })
+    
+const SHEETDB_URL = 'https://sheetdb.io/api/v1/m49pef60egnbd';
+
+// --- تابع ثبت‌نام ---
+function handleRegister() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const msg = document.getElementById('authMsg');
+
+    if (!user || !pass) {
+        msg.innerText = "لطفاً تمام کادرها را پر کنید";
+        return;
+    }
+
+    msg.innerText = "در حال بررسی نام کاربری...";
+
+    // اول چک می‌کنیم تکراری نباشد
+    fetch(SHEETDB_URL + "/search?username=" + user)
+    .then(response => response.json())
+    .then(data => {
+        if (data.length > 0) {
+            msg.innerText = "این نام کاربری قبلاً انتخاب شده است! ❌";
+            msg.style.color = "#ff4444";
+        } else {
+            // اگر تکراری نبود، ثبت‌نام کن
+            registerNewUser(user, pass);
+        }
+    })
+    .catch(error => { msg.innerText = "خطا در ارتباط با سرور"; });
+}
+
+function registerNewUser(user, pass) {
+    const msg = document.getElementById('authMsg');
+    fetch(SHEETDB_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: [{ 'username': user, 'password': pass }] })
+    })
+    .then(response => response.json())
+    .then(data => {
+        msg.innerText = "حساب ساخته شد! حالا 'ورود' را بزنید. ✅";
+        msg.style.color = "#00f260";
+    });
+}
+
+// --- تابع ورود (Login) ---
+function handleLogin() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const msg = document.getElementById('authMsg');
+
+    if (!user || !pass) {
+        msg.innerText = "نام کاربری و رمز را وارد کنید";
+        return;
+    }
+
+    msg.innerText = "در حال ورود...";
+
+    fetch(SHEETDB_URL + "/search?username=" + user)
+    .then(response => response.json())
+    .then(data => {
+        // چک می‌کنیم یوزر وجود داشته باشد و پسوردش هم درست باشد
+        if (data.length > 0 && data[0].password == pass) {
+            msg.innerText = "ورود موفقیت‌آمیز! ✅";
+            msg.style.color = "#00f260";
+
+            // حالا اینجا وضعیت ورود را ذخیره می‌کنیم
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', user);
+
+            setTimeout(() => {
+                updateUI(user);
+                closeSection();
+            }, 1000);
+        } else {
+            msg.innerText = "نام کاربری یا رمز اشتباه است ❌";
+            msg.style.color = "#ff4444";
+        }
+    });
+}
+
+// تابع برای آپدیت کردن ظاهر سایت
+function updateUI(username) {
+    const statusText = document.getElementById('userStatus');
+    if (statusText) statusText.innerText = "سلام " + username + " عزیز!";
+    
+    const userTitle = document.getElementById('userTitle');
+    if (userTitle) userTitle.innerText = "پنل کاربری";
+}
+
+// چک کردن وضعیت ورود هنگام باز شدن سایت
+window.addEventListener('load', () => {
+    const status = localStorage.getItem('isLoggedIn');
+    const savedUser = localStorage.getItem('currentUser');
+    if (status === 'true' && savedUser) {
+        updateUI(savedUser);
+    }
+});
     </script>
 </body>
 </html>

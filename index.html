@@ -6,21 +6,30 @@
     <title>MaDMaN</title>
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        #userDashboard { text-align: center; }
+        #adminMsg {
+            width: 100%; height: 100px; background: rgba(0,0,0,0.3); 
+            color: white; border: 1px solid #00f260; border-radius: 10px; 
+            padding: 10px; margin-top: 10px; font-family: Vazirmatn;
+        }
+        .dash-btn {
+            width: 100%; padding: 12px; background: #00f260; color: black; 
+            border: none; border-radius: 10px; cursor: pointer; 
+            margin-top: 10px; font-weight: bold; font-family: Vazirmatn;
+        }
+    </style>
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loader" id="loader">
         <div class="loader-text">MADMAN</div>
         <div class="card-icon">💻</div>
     </div>
+    
     <a href="./index-1.html"><button class="clse-btn"><</button></a>
-
-    <!-- Particles Background -->
     <div class="particles" id="particles"></div>
 
-    <!-- Main Menu -->
-     
-        <div class="container" id="mainMenu">
+    <div class="container" id="mainMenu">
         <div class="header">
             <h1>MADMAN</h1>
             <p>Content Crator & Gamer & programmer</p>
@@ -34,7 +43,7 @@
             <div class="menu-card" onclick="openSection('specs')">
                 <span class="card-icon">🖥️</span>
                 <h2 class="card-title">مشخصات سیستم</h2>
-                <p class="card-desc">سخت‌افزار  که باهاش کار می‌کنم</p>
+                <p class="card-desc">سخت‌افزار که باهاش کار می‌کنم</p>
             </div>
             <div class="menu-card" onclick="openSection('social')">
                 <span class="card-icon">🌐</span>
@@ -48,18 +57,14 @@
             </div>
         </div>
     </div>
-
-    <!-- About Section -->
     <div class="content-section" id="cheSection">
         <button class="close-btn" onclick="closeSection()">🏠</button>
         <div class="section-content">
             <div class="about-box">
                 <p class="about-text">
-                    سلام! من <span class="highlight">ممد</span> هستم 👋<br><br>
-                    متولد <span class="highlight"> اسفند ماه 1394  </span> و از سال <span class="highlight">1405</span> هست که فعالیت خودم رو توی 
+                    سلام! من <span class="highlight">یک توسعه‌دهنده</span> هستم 👋<br><br>
+                    متولد <span class="highlight"> اسفند ماه 1394 </span> و از سال <span class="highlight">1405</span> هست که فعالیت خودم رو توی 
                     <span class="highlight">آپارات</span> شروع کردم.<br><br>
-                   
-                    
                     البته شاید بگید من ۱۰ ساله کوجا ؟؟؟؟ اینجا کوجا؟؟؟
                     راستش رو بخواین من وارد <span class="highlight">دنیای کامپیتر هستم</span>
                     <br>
@@ -67,394 +72,198 @@
                     <span style="font-size: 2rem;">🎮</span>
                 </p>
             </div>
-            </div>
-        </div>
-    </div>
-    <div class="content-section" id="aboutSection">
-        <button class="close-btn" onclick="closeSection()">🏠</button>
-        <div class="about-box">
-            <div class="menu-card">
-                <div class="lagab">
-                <div class="spec-card">
-                    <div class="spec-name">تکیه کلامم</div>
-                    <div class="spec-value">بیا منو بخورر!!!</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-name">لغبام</div>
-                    <div class="spec-value">ممد قلی , مد من</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-name">اسمم </div>
-                    <div class="spec-value">ممد علیقلی زاده </div>
-                </div>
-                </div>
-            </div>
         </div>
     </div>
 
-
-    <!-- Specs Section -->
-    <div class="content-section" id="specsSection">
+    <div class="content-section" id="userSection">
         <button class="close-btn" onclick="closeSection()">🏠</button>
         <div class="section-content">
-          <div class="menu-card">
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-icon">🧠</div>
-                    <div class="spec-name">پردازنده</div>
-                    <div class="spec-value">Intel Core i7-8550U</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-icon">💾</div>
-                    <div class="spec-name">رم</div>
-                    <div class="spec-value">8 GB DDR4</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-icon">🎮</div>
-                    <div class="spec-name">کارت گرافیک</div>
-                    <div class="spec-value">NVIDIA Geforce MX130</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-icon">⚡</div>
-                    <div class="spec-name">حافظه SSD</div>
-                    <div class="spec-value">512 GB</div>
-                </div>
-               </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="content-section" id="madSection">
-        <button class="close-btn" onclick="closeSection()">🏠</button>
-        <div class="menu-card">
-            <a href="https://b2n.ir/ab3y-net">
-            <div class="spec-icon"><img src="ab3y-logo.png" sizes="10x69"></div>
-            <div class="spec-name">ab3y</div>
-            <div class="spec-value">ab3y for code & help</div>
-            </a>
-        </div>
-        <div class="menu-card">
-            <a href="https://b2n.ir/ratus-voice">
-                <div class="spec-name">ratus | the your voice asisant</div>
-                <div class="spec-value">راتوس | یک هوش مصنوعی صوتی</div>
-            </a>
-        </div>
-    </div>
-    <div class="content-section" id="userSection">
-    <button class="close-btn" onclick="closeSection()">🏠</button>
-    <div class="section-content">
-        <div class="about-box">
-            <h2 class="highlight" id="userTitle">ورود به حساب کاربری</h2>
-            <br>
-            <div class="specs-grid" style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" id="username" placeholder="نام کاربری" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center; font-family: Vazirmatn;">
-                <input type="password" id="password" placeholder="رمز عبور" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center; font-family: Vazirmatn;">
-                
-                <div style="display: flex; gap: 10px; justify-content: center;">
-                    <button onclick="handleRegister()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; font-size: 1rem; background: #555;">ثبت‌نام</button>
-                    <button onclick="handleLogin()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; font-size: 1rem; background: #00f260; color: black;">ورود</button>
-                </div>
-                <p id="authMsg" style="margin-top: 15px; font-size: 0.9rem;"></p>
-            </div>
-        </div>
-    </div>
-    <div class="content-section" id="userSection">
-    <button class="close-btn" onclick="closeSection()">✕</button>
-    
-    <div id="loginForm">
-        <h2 class="highlight">ورود به سیستم</h2>
-        </div>
-
-    <div id="userDashboard" style="display:none;">
-        <h2 class="highlight">خوش آمدی، <span id="displayUserName"></span>! 🔥</h2>
-        </div>
-</div>
-</div>
-    <div class="content-section" id="tajSection">
-        <button class="close-btn" onclick="closeSection()">🏠</button>
-        <div class="section-content">
-          <div class="menu-card">
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-icon">🖱</div>
-                    <div class="spec-name">موس</div>
-                    <div class="spec-value">هنوز فابریک</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-icon">⌨</div>
-                    <div class="spec-name">کیبورد</div>
-                    <div class="spec-value">هنوز فابریک</div>
-                </div>
-                <div class="spec-card">
-                    <div class="spec-icon">🎧</div>
-                    <div class="spec-name">هدفون </div>
-                    <div class="spec-value">S33 ENC+ANC Sterio</div>
-                </div>
-               </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="content-section" id="manSection">
-        <button class="close-btn" onclick="closeSection()">🏠</button>
-        <div class="menu-card">
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-icon"></div>
-                    <div class="spec-name"></div>
-                    <div class="spec-value"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="userDashboard" class="about-box" style="display: none; margin-top: 20px;">
-    <h2 class="highlight">پنل کاربری</h2>
-    <p>خوش آمدی <span id="displayUserName"></span>!</p>
-    
-    <div style="margin-top: 25px; text-align: right;">
-        <label>ارسال پیام به سرور (API):</label>
-        <textarea id="adminMsg" placeholder="چیزی بنویس..." 
-                  style="width: 100%; height: 100px; background: rgba(0,0,0,0.3); color: white; border: 1px solid #00f260; border-radius: 10px; padding: 10px; margin-top: 10px; font-family: Vazirmatn;"></textarea>
-        
-        <button onclick="sendMessageToAPI()" 
-                style="width: 100%; padding: 12px; background: #00f260; color: black; border: none; border-radius: 10px; cursor: pointer; margin-top: 10px; font-weight: bold;">
-            ارسال به API 🚀
-        </button>
-        
-        <p id="msgStatus" style="margin-top: 10px; font-size: 0.9rem;"></p>
-    </div>
-
-    <button onclick="handleSignOut()" class="close-btn" style="position: static; margin-top: 20px;">خروج</button>
-</div>
-<!-- Social Section -->
-<div class="content-section" id="socialSection">
-    <button class="close-btn" onclick="closeSection()">🏠</button>
-
-    <div class="section-content">
-        <div class="social-grid">
-
-            <a href="https://www.aparat.com/MaDMaNGH"
-               target="_blank"
-               class="social-link aparat">
-                <span class="social-icon">📺</span>
-                <div class="social-info">
-                    <div class="social-name">آپارات</div>
-                    <div class="social-url">aparat.com/MaDMaNGH</div>
-                </div>
-            </a>
-
-            <a href="https://www.youtube.com/"
-               target="_blank"
-               class="social-link youtube">
-                <span class="social-icon">▶️</span>
-                <div class="social-info">
-                    <div class="social-name">یوتیوب</div>
-                    <div class="social-url">youtube.com/ به زودی</div>
-                </div>
-            </a>
-
-            <a href="https://rubika.ir/MaDMaNGH_kanal"
-               target="_blank"
-               class="social-link rubika">
-                <span class="social-icon">💬</span>
-                <div class="social-info">
-                    <div class="social-name">روبیکا</div>
-                    <div class="social-url">https://rubika.ir/MaDMaNGH_kanal
+            <div class="about-box">
+                <div id="loginForm">
+                    <h2 class="highlight" id="userTitle">ورود به حساب کاربری</h2>
+                    <br>
+                    <div style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
+                        <input type="text" id="username" placeholder="نام کاربری" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center;">
+                        <input type="password" id="password" placeholder="رمز عبور" style="padding: 15px; border-radius: 10px; border: 1px solid #00f260; background: rgba(0,0,0,0.3); color: white; text-align: center;">
+                        <div style="display: flex; gap: 10px; justify-content: center;">
+                            <button onclick="handleRegister()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; background: #555;">ثبت‌نام</button>
+                            <button onclick="handleLogin()" class="close-btn" style="position: static; width: auto; padding: 10px 20px; background: #00f260; color: black;">ورود</button>
+                        </div>
+                        <p id="authMsg" style="margin-top: 15px; font-size: 0.9rem;"></p>
                     </div>
                 </div>
-            </a>
 
-            <a href="https://t.me/"
-               target="_blank"
-               class="social-link telegram">
-                <span class="social-icon">🔵</span>
-                <div class="social-info">
-                    <div class="social-name">تلگرام</div>
-                    <div class="social-url">t.me/ به زودی</div>
+                <div id="userDashboard" style="display: none;">
+                    <h2 class="highlight">خوش آمدی، <span id="displayUserName"></span>! 🔥</h2>
+                    <div style="margin-top: 25px; text-align: right;">
+                        <label>ارسال پیام به سرور (API):</label>
+                        <textarea id="adminMsg" placeholder="چیزی بنویس..."></textarea>
+                        <button onclick="sendMessageToAPI()" class="dash-btn">ارسال به API 🚀</button>
+                        <p id="msgStatus" style="margin-top: 10px; font-size: 0.9rem; text-align: center;"></p>
+                    </div>
+                    <button onclick="handleSignOut()" class="close-btn" style="position: static; margin-top: 20px; background: #ff4444; width: 100%;">خروج از حساب</button>
                 </div>
-            </a>
-
+            </div>
         </div>
     </div>
-</div>
-   <script>
-        // Create particles
-        function createParticles() {
-            const container = document.getElementById('particles');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                container.appendChild(particle);
-            }
-        }
 
-        // Hide loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 1000);
-        });
-
-        createParticles();
-
-        // Section management
-        function openSection(name) {
-    // مخفی کردن منوی اصلی
-    document.getElementById('mainMenu').style.display = 'none';
-    
-    // نمایش سکشن مورد نظر
-    const targetSection = document.getElementById(name + 'Section');
-    if (targetSection) {
-        targetSection.style.display = 'block';
-    }
-
-    // یک چک اضافه برای پنل کاربری:
-    if (name === 'user') {
-        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-        const user = localStorage.getItem('currentUser');
-        // فراخوانی آپدیت UI برای اطمینان از نمایش لایه درست (داشبورد یا فرم)
-        updateUI(isLoggedIn ? user : null);
-    }
-}
-
-        function closeSection() {
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById('mainMenu').style.display = 'flex';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Keyboard support
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeSection();
-        });
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'a') openSection('about')
-        })
-    
+    <script>
+        // آدرس دیتابیس تو
 const SHEETDB_URL = 'https://sheetdb.io/api/v1/m49pef60egnbd';
 
-// --- تابع ثبت‌نام ---
-function handleRegister() {
-    const user = document.getElementById('username').value;
-    const pass = document.getElementById('password').value;
-    const msg = document.getElementById('authMsg');
-
-    if (!user || !pass) {
-        msg.innerText = "لطفاً تمام کادرها را پر کنید";
-        return;
-    }
-
-    msg.innerText = "در حال بررسی نام کاربری...";
-
-    // اول چک می‌کنیم تکراری نباشد
-    fetch(SHEETDB_URL + "/search?username=" + user)
-    .then(response => response.json())
-    .then(data => {
-        if (data.length > 0) {
-            msg.innerText = "این نام کاربری قبلاً انتخاب شده است! ❌";
-            msg.style.color = "#ff4444";
-        } else {
-            // اگر تکراری نبود، ثبت‌نام کن
-            registerNewUser(user, pass);
-        }
-    })
-    .catch(error => { msg.innerText = "خطا در ارتباط با سرور"; });
-}
-
-function registerNewUser(user, pass) {
-    const msg = document.getElementById('authMsg');
-    fetch(SHEETDB_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: [{ 'username': user, 'password': pass }] })
-    })
-    .then(response => response.json())
-    .then(data => {
-        msg.innerText = "حساب ساخته شد! حالا 'ورود' را بزنید. ✅";
-        msg.style.color = "#00f260";
-    });
-}
-
-// --- تابع ورود (Login) ---
-function handleLogin() {
-    const user = document.getElementById('username').value;
-    const pass = document.getElementById('password').value;
-    const msg = document.getElementById('authMsg');
-
-    if (!user || !pass) {
-        msg.innerText = "نام کاربری و رمز را وارد کنید";
-        return;
-    }
-
-    msg.innerText = "در حال ورود...";
-
-    fetch(SHEETDB_URL + "/search?username=" + user)
-    .then(response => response.json())
-    .then(data => {
-        // چک می‌کنیم یوزر وجود داشته باشد و پسوردش هم درست باشد
-        if (data.length > 0 && data[0].password == pass) {
-            msg.innerText = "ورود موفقیت‌آمیز! ✅";
-            msg.style.color = "#00f260";
-
-            // حالا اینجا وضعیت ورود را ذخیره می‌کنیم
-            localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('currentUser', user);
-
-            setTimeout(() => {
-                updateUI(user);
-                closeSection();
-            }, 1000);
-        } else {
-            msg.innerText = "نام کاربری یا رمز اشتباه است ❌";
-            msg.style.color = "#ff4444";
-        }
-    });
-}
-
-// تابع برای آپدیت کردن ظاهر سایت
-function updateUI(username) {
-    const statusText = document.getElementById('userStatus');
-    if (statusText) statusText.innerText = "سلام " + username + " عزیز!";
-    
-    const userTitle = document.getElementById('userTitle');
-    if (userTitle) userTitle.innerText = "پنل کاربری";
-}
-
-// چک کردن وضعیت ورود هنگام باز شدن سایت
+// ۱. انیمیشن لودر اول سایت
 window.addEventListener('load', () => {
-    const status = localStorage.getItem('isLoggedIn');
-    const savedUser = localStorage.getItem('currentUser');
-    if (status === 'true' && savedUser) {
-        updateUI(savedUser);
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 500);
+        }, 1000);
     }
 });
-async function sendMessageToAPI() {
-    const message = document.getElementById('adminMsg').value;
-    const user = localStorage.getItem('currentUser') || "کاربر ناشناس";
-    const status = document.getElementById('msgStatus');
 
-    try {
-        const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ sender: user, text: message })
-        });
-
-        const data = await response.json();
-        if (data.success) {
-            status.innerText = data.message;
-            status.style.color = "#00f260";
-        }
-    } catch (error) {
-        status.innerText = "خطا در اتصال به API اختصاصی";
-        status.style.color = "red";
+// ۲. ایجاد ذرات پس‌زمینه (Particles)
+function createParticles() {
+    const container = document.getElementById('particles');
+    if (!container) return;
+    for (let i = 0; i < 50; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDelay = Math.random() * 15 + 's';
+        p.style.animationDuration = (Math.random() * 10 + 10) + 's';
+        container.appendChild(p);
     }
 }
+createParticles();
+
+// ۳. مدیریت باز و بسته کردن بخش‌ها (Sections)
+function openSection(name) {
+    document.getElementById('mainMenu').style.display = 'none';
+    document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
+    
+    const target = document.getElementById(name + 'Section');
+    if (target) {
+        target.style.display = 'block';
+    }
+    
+    // اگر پنل کاربری باز شد، وضعیت رو چک کن
+    if (name === 'user') updateUI();
+}
+
+function closeSection() {
+    document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
+    document.getElementById('mainMenu').style.display = 'flex';
+}
+
+// ۴. سیستم ثبت‌نام کاربر جدید
+async function handleRegister() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const msg = document.getElementById('authMsg');
+
+    if (!user || !pass) {
+        msg.innerText = "فیلدها رو پر کن!";
+        return;
+    }
+
+    msg.innerText = "در حال بررسی...";
+    try {
+        const check = await fetch(`${SHEETDB_URL}/search?username=${user}`);
+        const exist = await check.json();
+
+        if (exist.length > 0) {
+            msg.innerText = "این یوزرنیم قبلاً ثبت شده! ❌";
+        } else {
+            await fetch(SHEETDB_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: [{ username: user, password: pass }] })
+            });
+            msg.innerText = "ثبت‌نام شد! حالا وارد شو ✅";
+        }
+    } catch (e) {
+        msg.innerText = "خطا در اتصال به دیتابیس!";
+    }
+}
+
+// ۵. سیستم ورود (Login)
+async function handleLogin() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+    const msg = document.getElementById('authMsg');
+
+    msg.innerText = "در حال ورود...";
+    try {
+        const res = await fetch(`${SHEETDB_URL}/search?username=${user}`);
+        const data = await res.json();
+
+        if (data.length > 0 && data[0].password == pass) {
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('currentUser', user);
+            updateUI();
+        } else {
+            msg.innerText = "یوزرنیم یا پسورد غلطه! ❌";
+        }
+    } catch (e) {
+        msg.innerText = "خطا در برقراری ارتباط!";
+    }
+}
+
+// ۶. خروج از حساب
+function handleSignOut() {
+    localStorage.clear();
+    updateUI();
+}
+
+// ۷. به‌روزرسانی رابط کاربری (سیستم چک کردن)
+function updateUI() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const user = localStorage.getItem('currentUser');
+    
+    const loginForm = document.getElementById('loginForm');
+    const dashboard = document.getElementById('userDashboard');
+    const userStatus = document.getElementById('userStatus');
+    const displayUser = document.getElementById('displayUserName');
+
+    if (isLoggedIn) {
+        if (loginForm) loginForm.style.display = 'none';
+        if (dashboard) dashboard.style.display = 'block';
+        if (displayUser) displayUser.innerText = user;
+        if (userStatus) userStatus.innerText = "سلام " + user + " خوش آمدی!";
+    } else {
+        if (loginForm) loginForm.style.display = 'block';
+        if (dashboard) dashboard.style.display = 'none';
+        if (userStatus) userStatus.innerText = "وارد حساب خود شوید";
+    }
+}
+
+// ۸. ارسال پیام به API
+async function sendMessageToAPI() {
+    const text = document.getElementById('adminMsg').value;
+    const user = localStorage.getItem('currentUser') || "ناشناس";
+    const status = document.getElementById('msgStatus');
+
+    if (!text) return;
+    status.innerText = "در حال ارسال...";
+
+    try {
+        await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ sender: user, text: text })
+        });
+        status.innerText = "ارسال شد! ✅";
+        document.getElementById('adminMsg').value = "";
+    } catch (e) {
+        status.innerText = "خطای سرور ❌";
+    }
+}
+
+// اجرای چک کردن وضعیت به محض لود شدن کد
+updateUI();
     </script>
 </body>
 </html>

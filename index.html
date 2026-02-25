@@ -290,11 +290,24 @@
         createParticles();
 
         // Section management
-        function openSection(section) {
-            document.getElementById('mainMenu').style.display = 'none';
-            document.getElementById(section + 'Section').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
+        function openSection(name) {
+    // مخفی کردن منوی اصلی
+    document.getElementById('mainMenu').style.display = 'none';
+    
+    // نمایش سکشن مورد نظر
+    const targetSection = document.getElementById(name + 'Section');
+    if (targetSection) {
+        targetSection.style.display = 'block';
+    }
+
+    // یک چک اضافه برای پنل کاربری:
+    if (name === 'user') {
+        const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        const user = localStorage.getItem('currentUser');
+        // فراخوانی آپدیت UI برای اطمینان از نمایش لایه درست (داشبورد یا فرم)
+        updateUI(isLoggedIn ? user : null);
+    }
+}
 
         function closeSection() {
             document.querySelectorAll('.content-section').forEach(section => {

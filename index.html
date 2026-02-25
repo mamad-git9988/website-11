@@ -196,6 +196,25 @@
             </div>
         </div>
     </div>
+    <div id="userDashboard" class="about-box" style="display: none; margin-top: 20px;">
+    <h2 class="highlight">پنل کاربری</h2>
+    <p>خوش آمدی <span id="displayUserName"></span>!</p>
+    
+    <div style="margin-top: 25px; text-align: right;">
+        <label>ارسال پیام به سرور (API):</label>
+        <textarea id="adminMsg" placeholder="چیزی بنویس..." 
+                  style="width: 100%; height: 100px; background: rgba(0,0,0,0.3); color: white; border: 1px solid #00f260; border-radius: 10px; padding: 10px; margin-top: 10px; font-family: Vazirmatn;"></textarea>
+        
+        <button onclick="sendMessageToAPI()" 
+                style="width: 100%; padding: 12px; background: #00f260; color: black; border: none; border-radius: 10px; cursor: pointer; margin-top: 10px; font-weight: bold;">
+            ارسال به API 🚀
+        </button>
+        
+        <p id="msgStatus" style="margin-top: 10px; font-size: 0.9rem;"></p>
+    </div>
+
+    <button onclick="handleSignOut()" class="close-btn" style="position: static; margin-top: 20px;">خروج</button>
+</div>
 <!-- Social Section -->
 <div class="content-section" id="socialSection">
     <button class="close-btn" onclick="closeSection()">🏠</button>

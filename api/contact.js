@@ -1,4 +1,5 @@
 // api/contact.js
+console.log("یک پیام جدید دریافت شد!");
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { sender, text } = req.body;
